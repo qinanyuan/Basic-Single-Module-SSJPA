@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -24,7 +25,9 @@ public class SSMTest {
 	
 	@Resource
 	private SysUserService sysUserService;
-	
+
+    private Logger logger = Logger.getLogger(this.getClass().getName());
+
 	@Test
 	public void testQuery() {
 		SysUser sysUser = sysUserService.getById(1L);
@@ -35,6 +38,10 @@ public class SSMTest {
 		System.out.println("--------------------------------" + sysUser2.toString());
 		System.out.println("--------------------------------" + sysUser3.toString());
 		System.out.println("--------------------------------" + sysUserList1.toString());
+        logger.info("--------------------------------" + sysUser.toString());
+        logger.info("--------------------------------" + sysUser2.toString());
+        logger.info("--------------------------------" + sysUser3.toString());
+        logger.info("--------------------------------" + sysUserList1.toString());
 		
 	}
 	

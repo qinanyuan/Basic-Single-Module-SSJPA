@@ -22,7 +22,7 @@
 
 <br>
 
-真实姓名：${user.sysUserRealName}
+真实姓名：${user.sysUserLoginPassword}
 
 </body>
 </html>
